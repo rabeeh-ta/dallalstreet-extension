@@ -10,5 +10,5 @@ app.get('/date/:date', (req, res) => {
 });
 
 app.listen(process.env.PORT || 3000, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log("server started");
 });
