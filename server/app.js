@@ -9,6 +9,6 @@ app.get('/date/:date', (req, res) => {
   console.log(req.params.date);
 });
 
-app.listen(process.env.PORT || 3000, , () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
