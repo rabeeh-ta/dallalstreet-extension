@@ -47,7 +47,7 @@ var addCompany = function (name, symbol) {
 
   return new Promise((resolve, reject) => {
     client.query(
-      'INSERT INTO companies (name,smbol,added_date) VALUES ($1,$2,$3)',
+      'INSERT INTO companies (name,symbol,added_date) VALUES ($1,$2,$3)',
       [name, symbol, date],
       (err, res) => {
         if (err) {
