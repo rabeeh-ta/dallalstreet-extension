@@ -35,6 +35,11 @@ app.post('/companies/add', (req, res) => {
     .catch((err) => res.send(err));
 });
 
+app.post('/test', (req, res) => {
+  console.log(req.body);
+  res.send('uploaded');
+});
+
 app.listen(process.env.PORT || 3000, () => {
   console.log('server started at localhost:3000');
 });
