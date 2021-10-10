@@ -8,22 +8,21 @@ body {
   min-width: 350px;
   border: 5px solid black;
   font-family: 'Poppins', sans-serif;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-
 /* navbar */
 nav {
-  display: flex ;
+  display: flex;
   margin: 20px;
   flex-direction: row;
-  justify-content: space-between ;
+  justify-content: space-between;
   align-items: center;
 }
 
-nav h1{
+nav h1 {
   font-size: 16px;
 }
 
@@ -40,76 +39,88 @@ nav h1{
 .main-name {
   letter-spacing: 1px;
 }
+.small-heading {
+  font-size: 18px;
+  margin: 4px;
+}
 
 /* input field */
 
-.form{
+.form {
   justify-items: center;
-  margin:10px
+  margin: 10px;
 }
 
-#search-field{
+.form ::placeholder {
+  font-weight: 600;
+}
+
+#search-field {
   padding: 5px 0;
   width: 250px;
   font-size: 14px;
   color: #ccc;
   background: transparent;
-  border:none;
+  border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   margin-right: 20px;
 }
-.search-button
-  {
-    display: inline-block;
-    line-height: 25px;
-    padding: 0 10px;
-    cursor: pointer;
-    color: #fff;
-    font-size: 12px;
-    outline: none;
-    border:none;
-    background-color: #57b846;
-    border-radius: 20px;
-    letter-spacing: 0.5px;
-}
-
-.search-button :hover{
-  background-color: black;
+.search-button {
+  display: inline-block;
+  line-height: 25px;
+  padding: 0 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 12px;
+  outline: none;
+  border: none;
+  background-color: #57b846;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
 }
 
 /* analysis section */
 
-.analysis{
-  margin:10px
+.analysis {
+  margin: 10px;
 }
 
-.img-logos-black{
+.img-logos-black {
   width: 90px;
   background-color: black;
   border-radius: 20px;
-  margin:5px;
-  padding:4px
+  margin: 5px;
+  padding: 4px;
 }
-.img-logos-white{
+.img-logos-white {
   width: 90px;
   background-color: white;
   border-radius: 20px;
-  margin:5px;
-  padding:4px;
+  margin: 5px;
+  padding: 4px;
 }
-.img-logos-trendlyne{
+.img-logos-trendlyne {
   width: 90px;
   background-color: white;
   border-radius: 20px;
-  margin:2px;
-  padding:2px
+  margin: 2px;
+  padding: 2px;
 }
 
-.analysis h4{
+.analysis h4 {
   margin-right: 8px;
 }
 
-.analysis-logos{
+.analysis-logos {
   width: 340px;
   overflow-wrap: break-word;
+}
+
+/* official section*/
+.official-link {
+  color: #00688b;
+  font-weight: 600;
+  padding-left: 8px;
+  font-size: 15px;
+  text-decoration: none;
 }
