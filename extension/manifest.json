@@ -11,6 +11,10 @@
         "activeTab",
         "scripting"
     ],
+    "host_permissions": [
+        "http://www.google.com/",
+        "https://www.google.com/"
+    ],
     "action": {
         "default_popup": "index.html",
         "default_icon": {}
