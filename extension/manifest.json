@@ -13,7 +13,9 @@
     ],
     "host_permissions": [
         "http://www.google.com/",
-        "https://www.google.com/"
+        "https://www.google.com/",
+        "http://dallalstreet-api.herokuapp.com/",
+        "https://dallalstreet-api.herokuapp.com/"
     ],
     "action": {
         "default_popup": "index.html",
