@@ -5,7 +5,6 @@ const allRedirectBtns = document.getElementsByClassName('redirect-link'); // get
 refreshBtn.addEventListener('click', () => {
   //clear the previous query
   redirectLinks = new Object();
-  allRedirectSource = [];
 
   // query all the search and get the links
   for (var item of allRedirectBtns) {
