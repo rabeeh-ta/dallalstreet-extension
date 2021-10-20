@@ -1,15 +1,13 @@
 var redirectLinks = {};
-var allRedirectSource = [];
 const refreshBtn = document.getElementById('refresh-btn');
-const allRedirectBtns = document.getElementsByClassName('redirect-link');
+const allRedirectBtns = document.getElementsByClassName('redirect-link'); // get all the button's id to query for
 
 refreshBtn.addEventListener('click', () => {
   //clear the previous query
   redirectLinks = new Object();
   allRedirectSource = [];
 
-  // get all the buttons id to query for
-  // console.log(allRedirectBtns);
+  // query all the search and get the links
   for (var item of allRedirectBtns) {
     mrMehta('zomato', item.id);
   }
@@ -32,7 +30,7 @@ function mrMehta(compName, sourceName) {
         const classElements = doc.getElementsByClassName('yuRUbf');
         const sourceLink = classElements[0].firstChild.getAttribute('href');
         redirectLinks[sourceName] = sourceLink;
-        console.log(sourceLink);
+        // console.log(sourceLink);
       });
     }
   );
