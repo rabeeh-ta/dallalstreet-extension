@@ -7,15 +7,17 @@ refreshBtn.addEventListener('click', () => {
   redirectLinks = new Object();
 
   // query all the search and get the links
-  for (var item of allRedirectBtns) {
-    mrMehta('zomato', item.id);
-  }
+  // for (var item of allRedirectBtns) {
+  //   mrMehta('zomato', item.id);
+  // }
+
+  mrMehta('hcl tech', 'screener');
 
   // query google and get the links
   /*
   mrMehta('hcl tech', 'trendlyne');
   mrMehta('hcl tech', 'tickertape');
-  mrMehta('hcl tech', 'screener');
+  
   mrMehta('hcl tech', 'wikipedia');
   */
 });
@@ -29,7 +31,7 @@ function mrMehta(compName, sourceName) {
         const classElements = doc.getElementsByClassName('yuRUbf');
         const sourceLink = classElements[0].firstChild.getAttribute('href');
         redirectLinks[sourceName] = sourceLink;
-        // console.log(sourceLink);
+        console.log(sourceLink);
       });
     }
   );
