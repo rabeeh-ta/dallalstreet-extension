@@ -5,7 +5,7 @@ chrome.runtime.onInstalled.addListener(() => {
     .then((response) => response.json())
     .then((data) => {
       db = data;
-      chrome.storage.local.set(db);
+      chrome.storage.local.set({ dallalDB: db });
     })
     .catch((err) => console.log(err));
 });
