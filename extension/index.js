@@ -32,7 +32,7 @@ function mrMehta(compName, sourceName) {
         const classElements = doc.getElementsByClassName('yuRUbf');
         const sourceLink = classElements[0].firstChild.getAttribute('href');
         redirectLinks[sourceName] = sourceLink;
-        //console.log(sourceLink);
+        console.log(sourceLink);
       });
     }
   );
@@ -43,8 +43,7 @@ window.addEventListener('load', () => {
   console.log('page is fully loaded');
   chrome.storage.local.get('dallalDB', (data) => {
     dallalDB = data;
-    //console.log(dallalDB);
-    //console.log(data);
+    console.log(dallalDB);
   });
 });
 
