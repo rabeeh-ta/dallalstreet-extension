@@ -2,7 +2,17 @@ var redirectLinks = {};
 var dallalDB = [];
 const refreshBtn = document.getElementById('refresh-btn');
 const allRedirectBtns = document.getElementsByClassName('redirect-link'); // get all the button's id to query for
+const searchField = document.getElementById('search-field'); // form input field
 
+//? search filed autocomplete form eventlistener.
+searchField.addEventListener('input', (e) => {
+  console.log(e.target.value);
+  searchString = e.target.value;
+  let result = dallalDB[1];
+  console.log(result);
+});
+
+//? search button click function
 refreshBtn.addEventListener('click', () => {
   //clear the previous query
   redirectLinks = new Object();
@@ -23,7 +33,7 @@ refreshBtn.addEventListener('click', () => {
   */
 });
 
-// query google and scrape and return the first link from the result
+//? query google and scrape and return the first link from the result
 function mrMehta(compName, sourceName) {
   fetch(`https://www.google.com/search?q=${compName}+${sourceName}`).then(
     (res) => {
@@ -38,7 +48,7 @@ function mrMehta(compName, sourceName) {
   );
 }
 
-// load the saved dallalDB from the local storage to currentJSstate
+//? load the saved dallalDB from the local storage to currentJSstate
 window.addEventListener('load', () => {
   console.log('page is fully loaded');
   chrome.storage.local.get('dallalDB', (data) => {
