@@ -69,20 +69,28 @@ nav h1 {
   display: inline-block;
   line-height: 25px;
   padding: 0 10px;
+  height: 30px;
+  font-size: 20px;
   cursor: pointer;
   color: #fff;
   font-size: 12px;
   outline: none;
   border: none;
   background-color: #57b846;
-  border-radius: 20px;
+  border-radius: 15px;
   letter-spacing: 0.5px;
+}
+
+.autocomplete p {
+  margin-left: 15px;
+  color: #57cc99;
+  font-weight: bold;
 }
 
 /* analysis section */
 
 .analysis {
-  margin: 10px;
+  margin: 5px 10px 10px;
 }
 
 .img-logos-black {

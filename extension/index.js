@@ -1,19 +1,41 @@
 var redirectLinks = {};
 var dallalDB = [];
 const refreshBtn = document.getElementById('refresh-btn');
+const searchBtn = document.getElementById('search-button');
 const allRedirectBtns = document.getElementsByClassName('redirect-link'); // get all the button's id to query for
 const searchField = document.getElementById('search-field'); // form input field
+const autoSearchResult = document.getElementById('auto-search');
+var searchComp = ' ';
 
-//? search filed autocomplete form eventlistener.
+//? search filed autocomplete form DB.
 searchField.addEventListener('input', (e) => {
-  console.log(e.target.value);
   searchString = e.target.value;
-  let result = dallalDB[1];
-  console.log(result);
+  // if nothing is typed in the filed dont check the db
+  if (searchString == '') {
+    searchComp = null;
+  } else {
+    searchComp = dallalDB.find(
+      (item) =>
+        item.name.includes(searchString) ||
+        item.symbol.includes(searchString.toUpperCase())
+    );
+  }
+
+  // autocomplete section updating in dom && mr.metha's payload
+  if (searchComp != undefined || searchComp != null) {
+    autoSearchResult.innerHTML = searchComp.name; // DOM update
+    searchComp = searchComp.name; // mr.metha's parameter
+  } else {
+    autoSearchResult.innerHTML = ' '; // render nothing in DOM
+    searchComp = searchString; // mr.metha's parameter is what ever is typed in the input field
+  }
 });
 
 //? search button click function
-refreshBtn.addEventListener('click', () => {
+searchBtn.addEventListener('click', () => {
+  console.log('search button pressed');
+  console.log('search of ' + searchComp);
+
   //clear the previous query
   redirectLinks = new Object();
 
@@ -52,7 +74,8 @@ function mrMehta(compName, sourceName) {
 window.addEventListener('load', () => {
   console.log('page is fully loaded');
   chrome.storage.local.get('dallalDB', (data) => {
-    dallalDB = data;
+    dallalDB = data.dallalDB;
+
     console.log(dallalDB);
   });
 });
