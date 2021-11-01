@@ -50,20 +50,11 @@ searchBtn.addEventListener('click', () => {
   //clear the previous query
   redirectLinks = new Object();
 
-  // query all the search and get the links
-  // for (var item of allRedirectBtns) {
-  //   mrMehta('irctc', item.id);
-  // }
-
+  //*query all the search and get the links
+  for (let item of allRedirectBtns) {
+    mrMehta(searchComp, item.id);
+  }
   // mrMehta('irctc', 'screener');
-
-  // query google and get the links
-  /*
-  mrMehta('hcl tech', 'trendlyne');
-  mrMehta('hcl tech', 'tickertape');
-  
-  mrMehta('hcl tech', 'wikipedia');
-  */
 });
 
 //? query google and scrape and return the first link from the result
@@ -75,10 +66,26 @@ function mrMehta(compName, sourceName) {
         const classElements = doc.getElementsByClassName('yuRUbf');
         const sourceLink = classElements[0].firstChild.getAttribute('href');
         redirectLinks[sourceName] = sourceLink;
-        console.log(sourceLink);
+        //console.log(sourceLink);
+        //* update the redirect buttons
+        redirectBtnsState();
       });
     }
   );
+}
+
+//? update the redirect buttons
+function redirectBtnsState() {
+  //console.log(redirectLinks);
+  for (let [site, link] of Object.entries(redirectLinks)) {
+    //console.log(`${site}: ${link}`);
+    for (let item of allRedirectBtns) {
+      if (item.id == site) {
+        console.log(item);
+        item.href = link;
+      }
+    }
+  }
 }
 
 //? load the saved dallalDB from the local storage to currentJSstate
