@@ -10,7 +10,7 @@ var searchComp = ' ';
 //? search filed autocomplete form DB.
 searchField.addEventListener('input', (e) => {
   searchString = e.target.value;
-  // if nothing is typed in the filed dont check the db
+  //* if nothing is typed in the filed dont check the db
   if (searchString == '') {
     searchComp = null;
   } else {
@@ -21,13 +21,24 @@ searchField.addEventListener('input', (e) => {
     );
   }
 
-  // autocomplete section updating in dom && mr.metha's payload
+  //* autocomplete section updating in dom && mr.metha's payload
   if (searchComp != undefined || searchComp != null) {
     autoSearchResult.innerHTML = searchComp.name; // DOM update
     searchComp = searchComp.name; // mr.metha's parameter
   } else {
     autoSearchResult.innerHTML = ' '; // render nothing in DOM
     searchComp = searchString; // mr.metha's parameter is what ever is typed in the input field
+  }
+
+  //* update the search button's state if nothing is typed should be disabled.
+  if (searchString == '') {
+    // enable button
+    searchBtn.disabled = true;
+    searchBtn.style.cursor = 'not-allowed';
+  } else {
+    // disable button
+    searchBtn.disabled = false;
+    searchBtn.style.cursor = 'pointer';
   }
 });
 
@@ -74,10 +85,13 @@ function mrMehta(compName, sourceName) {
 window.addEventListener('load', () => {
   console.log('page is fully loaded');
   chrome.storage.local.get('dallalDB', (data) => {
+    // load the dallaldb
     dallalDB = data.dallalDB;
-
-    console.log(dallalDB);
   });
+
+  //* there will be nothing typed in the search field so button should not be clickable
+  searchBtn.disabled = true;
+  searchBtn.style.cursor = 'not-allowed';
 });
 
 console.log('after function');
