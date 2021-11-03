@@ -8,7 +8,7 @@ For eg want to learn about a new company let say `ITC` you will need the financi
 
 You get the point google and opening all this different sites will take time.
 
-![screenshot of extension]()
+![](https://github.com/rabeeh-ta/dallalstreet-extension/blob/master/scrnsht-extensino.jpg)
 
 Now after getting this extension just type the Company name, hit search. Get all the needed sites in one click.
 
@@ -16,7 +16,7 @@ Now after getting this extension just type the Company name, hit search. Get all
 
 clone the repo, go the extension settings of your Chromium based browser turn on extensions-developer then press load unpacked extension and open the `/extension` folder from the repo.
 
-## Project Structure 🗂
+### Project Structure 🗂
 
 - `/extension` directory
 
@@ -30,4 +30,4 @@ clone the repo, go the extension settings of your Chromium based browser turn on
 
 - `/resources` directory
 
-  All the source of the data used in this project. and miscellaneou other things.
+  All the source of the data used in this project. and miscellaneous other things.
