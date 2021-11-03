@@ -8,7 +8,7 @@ For eg want to learn about a new company let say `ITC` you will need the financi
 
 You get the point google and opening all this different sites will take time.
 
-![](https://github.com/rabeeh-ta/dallalstreet-extension/blob/master/scrnsht-extensino.jpg)
+![](https://github.com/rabeeh-ta/dallalstreet-extension/blob/master/scrnsht-extsn.jpg)
 
 Now after getting this extension just type the Company name, hit search. Get all the needed sites in one click.
 
