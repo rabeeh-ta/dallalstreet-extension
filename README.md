@@ -32,8 +32,8 @@ clone the repo, go the extension settings of your Chromium based browser turn on
 
   All the source of the data used in this project. and miscellaneous other things.
 
-<hr width="85%">
+<hr>
 
 ### Services used.
 
-the backend is hosted on [heroku]("https://www.heroku.com") with a Postgres Addon for the DB.
+the backend is hosted on [heroku](https://www.heroku.com) with a Postgres Addon for the DB.
