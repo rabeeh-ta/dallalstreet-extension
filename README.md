@@ -16,7 +16,7 @@ Now after getting this extension just type the Company name, hit search. Get all
 
 clone the repo, go the extension settings of your Chromium based browser turn on extensions-developer then press load unpacked extension and open the `/extension` folder from the repo.
 
-### Project Structure 🗂
+## Project Structure 🗂
 
 - `/extension` directory
 
@@ -31,3 +31,9 @@ clone the repo, go the extension settings of your Chromium based browser turn on
 - `/resources` directory
 
   All the source of the data used in this project. and miscellaneous other things.
+
+<hr width="85%">
+
+### Services used.
+
+the backend is hosted on [heroku]("https://www.heroku.com") with a Postgres Addon for the DB.
