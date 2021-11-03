@@ -81,7 +81,7 @@ function redirectBtnsState() {
     //console.log(`${site}: ${link}`);
     for (let item of allRedirectBtns) {
       if (item.id == site) {
-        console.log(item);
+        //console.log(item);
         item.href = link;
       }
     }
